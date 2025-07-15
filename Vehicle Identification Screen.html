@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #1990e5;
+        --secondary-color: #f0f2f4;
+        --background-color: #f9f9f9;
+        --text-primary: #111418;
+        --text-secondary: #637488;
+        --accent-color: #e0e7ff;
+        --carvana-blue: #00aed9;
+        --joyride-blue: #0076a8;
+        --halo-gold: #fbb62f;
+        --evening-drive: #3d4a5c;
+      }
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .button_primary {
+        @apply bg-[var(--primary-color)] text-white rounded-full px-6 py-3 font-bold hover:bg-[var(--joyride-blue)] transition-colors;
+      }
+      .button_secondary {
+        @apply bg-[var(--secondary-color)] text-[var(--text-primary)] rounded-full px-6 py-3 font-bold hover:bg-gray-300 transition-colors;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+    <div
+      class="relative flex size-full min-h-screen flex-col justify-between group/design-root"
+    >
+      <main class="flex-1">
+        <header class="bg-white sticky top-0 z-10 shadow-sm">
+          <div
+            class="container mx-auto flex items-center p-4 justify-between"
+          >
+            <button class="icon_button p-2">
+              <svg
+                class="text-[var(--text-primary)]"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <h1
+              class="text-lg font-bold text-center flex-1 text-[var(--text-primary)]"
+            >
+              Identified Vehicle
+            </h1>
+            <div class="w-8"></div>
+          </div>
+        </header>
+        <div class="p-4">
+          <div
+            class="w-full h-64 bg-center bg-no-repeat bg-cover rounded-2xl shadow-lg"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBqJMs4IDw9fGb1Ff4_Nfzf0jmr7-RqiKlLauicFkbjXaCfNvzuF2jYRZ7gij09urzE9r2uNFV-0jJhTp_9w5E33X5AnzZsgz6oZFkfqkA_MfVAbvVgSDgwmbptgzGmYcKXAvpC0NPfOFVYqSyXQQnsJgdDiN71lyBLXUEuTOkJO6CRaY-l34RemzjV7hELolZMuAl_lsjcIsy6M7KxhJr_iAttFzwNMMPTLy11crs0ZHb3liq8egfopR0E1S3EPwqKvORBmkzYviV");'
+          ></div>
+        </div>
+        <div class="px-6 py-4 text-center">
+          <h2 class="text-2xl font-bold text-[var(--text-primary)]">
+            2021 Toyota Camry
+          </h2>
+          <p class="text-base text-[var(--text-secondary)] mt-2">
+            Is this your vehicle?
+          </p>
+        </div>
+        <div class="px-4 pt-8 pb-4 space-y-4">
+          <button id="yes-continue" class="button_primary w-full">
+            Yes, continue
+          </button>
+          <button id="no-retry" class="button_secondary w-full">
+            No, try again
+          </button>
+        </div>
+      </main>
+      <footer
+        class="sticky bottom-0 bg-white border-t border-[var(--secondary-color)]"
+      >
+        <nav class="flex justify-around items-center h-20">
+          <a
+            class="flex flex-col items-center justify-center text-[var(--primary-color)]"
+            href="#"
+          >
+            <svg
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+            </svg>
+            <span class="text-xs font-medium">Home</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center text-[var(--text-secondary)]"
+            href="#"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect>
+              <line x1="12" x2="12" y1="8" y2="16"></line>
+              <line x1="8" x2="16" y1="12" y2="12"></line>
+            </svg>
+            <span class="text-xs font-medium">Add</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center text-[var(--text-secondary)]"
+            href="#"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M2.5 2v6h6M21.5 22v-6h-6"></path>
+              <path d="M22 11.5A10 10 0 0 0 3.5 12.5"></path>
+              <path d="M2 12.5a10 10 0 0 0 18.5-1"></path>
+            </svg>
+            <span class="text-xs font-medium">History</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center text-[var(--text-secondary)]"
+            href="#"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="text-xs font-medium">Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <script>
+      document
+        .getElementById('yes-continue')
+        .addEventListener('click', function () {
+          window.location.href = './Upgrade Visualization Screen.html';
+        });
+      document
+        .getElementById('no-retry')
+        .addEventListener('click', function () {
+          window.location.href = './Upload Car Image.html';
+        });
+    </script>
+  </body>
+</html>
